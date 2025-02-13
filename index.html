@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Makanan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pemesanan Makanan</h1>
+
+        <!-- Kategori Menu -->
+        <div class="kategori">
+            <button id="makanan" onclick="tampilkanKategori('makanan')">Makanan</button>
+            <button id="cemilan" onclick="tampilkanKategori('cemilan')">Cemilan</button>
+            <button id="minuman" onclick="tampilkanKategori('minuman')">Minuman</button>
+        </div>
+
+        <!-- Menu Makanan -->
+        <div class="menu" id="menu-makanan">
+            <div class="item">
+                <span>Nasi Goreng (฿50)</span>
+                <button class="minus" onclick="kurangi(1)">-</button>
+                <span id="jumlah1">0</span>
+                <button class="plus" onclick="tambah(1)">+</button>
+            </div>
+            <div class="item">
+                <span>Ayam Bakar (฿30)</span>
+                <button class="minus" onclick="kurangi(2)">-</button>
+                <span id="jumlah2">0</span>
+                <button class="plus" onclick="tambah(2)">+</button>
+            </div>
+            <div class="item">
+                <span>Soto Ayam (฿20)</span>
+                <button class="minus" onclick="kurangi(3)">-</button>
+                <span id="jumlah3">0</span>
+                <button class="plus" onclick="tambah(3)">+</button>
+            </div>
+            <!-- Item Makanan lainnya -->
+        </div>
+
+        <!-- Menu Cemilan -->
+        <div class="menu" id="menu-cemilan" style="display:none;">
+            <div class="item">
+                <span>Krupuk (฿10)</span>
+                <button class="minus" onclick="kurangi(10)">-</button>
+                <span id="jumlah10">0</span>
+                <button class="plus" onclick="tambah(10)">+</button>
+            </div>
+            <!-- Item Cemilan lainnya -->
+        </div>
+
+        <!-- Menu Minuman -->
+        <div class="menu" id="menu-minuman" style="display:none;">
+            <div class="item">
+                <span>Es Teh (฿15)</span>
+                <button class="minus" onclick="kurangi(20)">-</button>
+                <span id="jumlah20">0</span>
+                <button class="plus" onclick="tambah(20)">+</button>
+            </div>
+            <!-- Item Minuman lainnya -->
+        </div>
+
+        <h3>Total: ฿ <span id="total">0</span></h3>
+               
+        <h2>"Pesan via WhatsApp: isi 4 digit terakhir nomor WA. Pesan via Telegram: isi ID Telegram. Isi salah satu saja."</h2>
+
+        <label for="alamat">Alamat Pengiriman:</label>
+        <input type="text" id="alamat" placeholder="Masukkan alamat...">
+
+        <label for="nomor">Nomor WhatsApp:</label>
+        <input type="text" id="nomor" placeholder="Masukkan nomor WhatsApp">
+
+        <label for="telegram">ID Telegram:</label>
+        <input type="text" id="telegram" placeholder="Masukkan ID Telegram">
+
+        <div class="button-group">
+            <button id="pesanWhatsapp" onclick="pesan('whatsapp')">Pesan via WhatsApp</button>
+            <button id="pesanTelegram" onclick="pesan('telegram')">Pesan via Telegram</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

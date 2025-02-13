@@ -1,0 +1,173 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Font sederhana namun modern */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Latar belakang abu-abu terang */
+    color: #333; /* Warna teks gelap untuk keterbacaan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    max-width: 900px;
+    padding: 30px;
+    background-color: #ffffff; /* Putih bersih untuk konten */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Efek hover untuk melayang */
+}
+
+/* Heading Styling */
+h1, h2, h3 {
+    font-weight: 600;
+    color: #2c3e50; /* Teks gelap untuk judul */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* Button Category */
+.kategori {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.kategori button {
+    background-color: #3498db; /* Warna biru terang */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.kategori button:hover {
+    background-color: #2980b9; /* Warna biru lebih gelap saat hover */
+}
+
+.kategori button:focus {
+    outline: none;
+}
+
+/* Menu Item Styling */
+.menu {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    margin: 12px 0;
+    background-color: #ecf0f1; /* Warna latar belakang item menu */
+    color: #2c3e50; /* Warna teks item */
+    border-radius: 8px;
+    width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px); /* Efek hover pada item */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item span {
+    font-size: 18px; /* Ukuran font item yang sedang tertera */
+}
+
+.item .icon {
+    font-size: 22px;
+    color: #3498db; /* Ikon berwarna biru terang */
+}
+
+/* Button Group Styling */
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+button {
+    background-color: #27ae60; /* Hijau segar */
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    margin: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #2ecc71; /* Hijau lebih terang saat hover */
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* Input Fields Styling */
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #3498db; /* Biru terang border saat focus */
+    outline: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1, h2, h3 {
+        font-size: 24px;
+    }
+
+    .kategori button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .item {
+        width: 90%;
+        padding: 14px 20px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
